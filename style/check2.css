@@ -1,0 +1,295 @@
+@charset "utf-8";
+/* CSS Document */
+
+#PlayPage{
+	width:100%;
+	height:100%;
+}
+
+
+ #userscore {
+	 width:260px;
+	padding: 20px 35px;
+	margin: 10px 25px 0px 20px;
+	font-size: 15px;
+	cursor: pointer;
+	float:left;
+	background-color:#49AB4F;
+	border:none;
+	color:#FFF;
+	font-weight:bold;
+	border-radius: 10px;
+	font-size:30px;
+
+
+}
+#limit{
+	position:relative;
+	top:10px;
+	right:20px;
+}
+
+#limit img{
+	width:55px;
+	height:55px;
+	float:right;
+
+
+}
+
+#image{
+	background-image: url(../img/icon1.png);
+}
+/*
+#limit span{
+	float:left;
+position:relative;
+	bottom:10px;
+}
+*/
+#header_game{
+	height:75px;
+	margin-top:20px;
+}
+
+#question_title{
+	width:100%;
+	font-size:35px;
+	font-style:italic;
+	font-weight:lighter;
+	text-align:center;
+	margin-top:25px;
+
+	
+	position:relative;
+	padding:0;
+	top: 25px;
+
+
+}
+
+#time{
+	width:225px;
+	float:left;
+	margin-left: 350px;
+	margin-top:10px;
+		padding: 20px 35px;
+
+	font-size: 15px;
+	cursor: pointer;
+	float:left;
+	background-color:#49AB4F;
+	border:none;
+	color:#FFF;
+	font-weight:bold;
+	border-radius: 10px;
+	font-size:30px;
+}
+
+#maingame{
+	width:100%;
+	margin:auto;
+	font-size: 100px;
+	font-weight: 900;
+	padding-top:0px;
+	text-align:center;
+}
+.number{
+	position:absolute;
+	bottom:30px;
+	padding:10px;
+	width:100%;
+}
+
+.num {
+
+	height: 90px;
+	width: 90px;
+	float:left;
+	cursor:pointer;
+
+}
+.hide{
+	display:none;
+}
+.transparent{
+	opacity:0.3 ;
+}
+
+
+.num img{
+	width:100%;
+	height:100%:
+}
+
+
+.wrong{
+	color: #F00;
+}
+
+
+#false {
+	background-color: rgba(0,0,0,0.5);
+	width:100%;
+	height:100%;
+	z-index:2;
+	position:absolute;
+	top:0;
+}
+
+.false_content {
+	background-color:#C9EAF7;
+	width: 50%;
+	margin:100px auto;
+	padding:65px 20px;
+	border: 10px solid  #167CAD;
+	border-radius:5px;
+	z-index:5;
+	color: #B85929;
+	text-align:center;
+
+     /* Could be more or less, depending on screen size */
+}
+
+.right{
+	color:#0000D8;
+
+}
+
+#continue_cover{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+
+.continue_content{
+	position:absolute;
+	bottom:170px;
+	right: 370px;
+	
+}
+.continue{
+	padding: 10px 35px;
+
+	
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+	margin-top:17px;
+	font-size: 35px;
+	cursor: pointer;
+	display: inline-block;
+	background-color:#60BDEA;
+	color:#FFF;
+	font-weight:bolder;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #CDEAF8;
+	border-top-width: 3px;
+	border-right-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+}
+
+.tryAgain{
+	padding: 10px 35px;
+
+	
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+	margin-top:30px;
+	font-size: 35px;
+	cursor: pointer;
+	display: inline-block;
+	background-color:#60BDEA;
+	color:#FFF;
+	font-weight:bolder;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #CDEAF8;
+	border-top-width: 3px;
+	border-right-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+}
+.normal{
+	color: #FFF;
+}
+
+
+
+.animateHeart{
+	animation-name: Heart;
+    animation-duration: 1s;
+	animation-timing-function: linear;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes Heart {
+
+	0%   {opacity:0.1; }
+    100% {opacity:1;}
+}
+
+#answer img{
+	width:100%;
+	height:100%;
+
+}
+
+#h_image{
+	height:200px;
+	margin-top:60px;
+}
+#image{
+	width:100%;
+	height:200px;
+
+	background-size:200px 200px;
+	text-align:center;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#answer div{
+	float: left;
+	
+	padding: 10px 35px;
+
+	
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+	
+	font-size: 35px;
+	cursor: pointer;
+	display: inline-block;
+	background-color:#60BDEA;
+	color:#FFF;
+	font-weight:bolder;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #CDEAF8;
+	border-top-width: 3px;
+	border-right-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	margin-top:30px;
+	margin-left: 200px;
+}
+.true_ans{
+	height: 150px;
+	width:150px;
+}
+
+.false_ans{
+	height:150px;
+	width:150px;
+}

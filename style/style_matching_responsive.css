@@ -1,0 +1,418 @@
+/* CSS Document */
+
+#content{
+
+
+	min-height:100px;
+	height:auto;
+
+}
+
+.game_title {
+	color: #B85929;
+	text-align:center;
+	margin-bottom:20px;
+	margin-top:50px;
+	
+
+}
+
+.div1 {
+	width: 1100px;
+	height: 700px;
+	border: 1px solid black;
+	background-image: url("../img/product_junglebg.jpg");
+	background-size: 100% 100%;
+	position: relative;
+
+		margin:20px auto 100px auto;
+   /* top: 150px;*/
+}
+
+.tracing1 img {
+	width: 300px; 
+	height:auto; 
+	background-size: 100% 100%;
+	margin-left: 400px;
+	margin-top: 30px;
+	position: absolute;
+	border-radius: 10%;
+}
+.rotateimg350 {
+  -webkit-transform:rotate(350deg);
+  -moz-transform: rotate(350deg);
+  -ms-transform: rotate(350deg);
+  -o-transform: rotate(350deg);
+  transform: rotate(350deg);
+}
+
+.tracing2 img{
+	width: 300px; 
+	height:auto; 
+	background-size: 100% 100%;
+	left:770px;
+	top: 30px;
+	border-radius: 10%;
+	position: absolute;
+}
+
+.tracing3 img{
+	width: 300px; 
+	height:auto; 
+	margin-left: 460px;
+	margin-top: 300px;
+	position: absolute;
+	border-radius: 10%;
+}
+
+
+.tracing4 img{
+	width: 300px; 
+	height:auto; 
+	margin-left:40px;
+	margin-top: 30px;
+	position: absolute;
+	border-radius: 5%
+}
+.rotateimg15 {
+  -webkit-transform:rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.tracing5 img{
+	width: 300px; 
+	height:auto; 
+	margin-left: 780px;
+	margin-top: 300px;
+	position: absolute;
+	border-radius: 10%
+}
+
+.button {
+  display: inline-block;
+  padding: 25px 50px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:  #00ff00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: absolute;
+  margin-top: 500px;
+  margin-left: 550px;
+}
+
+.button:hover {background-color: #33cc33}
+
+.button:active {
+  background-color: #ffbf80;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.lion img{
+	width: 450px; 
+	height: auto; 
+	margin-left: 10px; 
+	margin-top: 250px;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)  
+  and (orientation: portrait)  { 
+	.div1 {
+
+	max-width: 100%;
+	width: 100%;
+	height: 40%;
+	}
+	.tracing1 img{
+	margin-left: 150px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing2 img{
+	left: 250px;
+	top: 25px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing3 img{
+	margin-left: 170px;
+	margin-top: 120px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.tracing4 img{
+	margin-left: 20px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing5 img{
+	margin-left: 280px;
+	margin-top: 120px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.button {
+	max-width:100%;
+	width: 20%;
+	height: 15%;
+	font-size: 15px;
+	padding: 0px;
+	margin-top: 180px;
+	margin-left: 190px;
+	}
+	.lion img{
+	margin-left: 10px; 
+	margin-top: 100px;
+	max-width: 100%;
+	width: 45%;
+	}
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (orientation: landscape){ 
+	.div1 {
+	top: 0px;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	}
+	.tracing1 img{
+	margin-left: 250px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 27%;
+	}
+	.tracing2 img{
+	left: 440px;
+	top: 25px;
+	max-width: 100%;
+	width: 27%;
+	}
+	.tracing3 img{
+	margin-left: 270px;
+	margin-top: 170px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing4 img{
+	margin-left: 20px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing5 img{
+	margin-left: 460px;
+	margin-top: 170px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.button {
+	max-width:100%;
+	width: 18%;
+	height: 13%;
+	font-size: 20px;
+	padding: 0px;
+	margin-top: 280px;
+	margin-left: 300px;
+	}
+	.lion img{
+	margin-left: 10px; 
+	margin-top: 140px;
+	max-width: 100%;
+	width: 35%;
+	}
+}
+
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px)  
+  and (orientation: portrait)  { 
+	.div1 {
+
+	max-width: 100%;
+	width: 100%;
+	height: 40%;
+	}
+	.tracing1 img{
+	margin-left: 140px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing2 img{
+	left: 260px;
+	top: 25px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing3 img{
+	margin-left: 170px;
+	margin-top: 120px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.tracing4 img{
+	margin-left: 20px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing5 img{
+	margin-left: 270px;
+	margin-top: 120px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.button {
+	max-width:100%;
+	width: 20%;
+	height: 15%;
+	font-size: 15px;
+	padding: 0px;
+	margin-top: 180px;
+	margin-left: 190px;
+	}
+	.lion img{
+	margin-left: 10px; 
+	margin-top: 95px;
+	max-width: 100%;
+	width: 45%;
+	}
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)  
+  and (orientation: portrait)  { 
+  	.game_title{
+		margin-top:70px;
+	}
+  	#content{
+		min-height: 700px;
+	}
+	.div1 {
+	
+	max-width: 100%;
+	width: 100%;
+	height: 40%;
+	margin-top:50px;
+	}
+	.tracing1 img{
+	margin-left: 300px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing2 img{
+	left: 550px;
+	top: 25px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing3 img{
+	margin-left: 300px;
+	margin-top: 180px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.tracing4 img{
+	margin-left: 50px;
+	margin-top: 20px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing5 img{
+	margin-left: 500px;
+	margin-top: 180px;
+	max-width: 100%;
+	width: 24%;
+	}
+	.button {
+	max-width:100%;
+	width: 20%;
+	height: 15%;
+	font-size: 20px;
+	padding: 0px;
+	margin-top: 300px;
+	margin-left: 350px;
+	}
+	.lion img{
+	margin-left: 10px; 
+	margin-top: 160px;
+	max-width: 100%;
+	width: 33%;
+	}
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape){ 
+	.div1 {
+	top: 0px;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	}
+	.tracing1 img{
+	margin-left: 370px;
+	margin-top: 30px;
+	max-width: 100%;
+	width: 28%;
+	}
+	.tracing2 img{
+	left: 700px;
+	top: 70px;
+	max-width: 100%;
+	width: 28%;
+	}
+	.tracing3 img{
+	margin-left: 450px;
+	margin-top: 320px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.tracing4 img{
+	margin-left: 30px;
+	margin-top: 50px;
+	max-width: 100%;
+	width: 30%;
+	}
+	.tracing5 img{
+	margin-left: 740px;
+	margin-top: 320px;
+	max-width: 100%;
+	width: 25%;
+	}
+	.button {
+	max-width:100%;
+	width: 25%;
+	height: 10%;
+	font-size: 30px;
+	padding: 20px 45px;
+	margin-top: 550px;
+	margin-left: 550px;
+	}
+	.lion img{
+	margin-left: 10px; 
+	margin-top: 320px;
+	max-width: 100%;
+	width: 43%;
+	}
+  
+}

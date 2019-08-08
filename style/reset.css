@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clearfix:after{
+	display:block;
+	content:"";
+	clear:both;
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+
+}
+
+*{
+	margin:0;
+	padding:0;
+
+	font-family: "Comic Sans MS", cursive;
+
+	box-sizing: border-box;
+}
+

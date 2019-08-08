@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'mensch';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../font/mensch-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'mensch';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/mensch-webfont.eot');
+}
+
+*{
+font-size:48px;
+}
+
+#content  {
+
+  text-align: center;
+  font-family: mensch;
+  font-size: 48px;
+
+}

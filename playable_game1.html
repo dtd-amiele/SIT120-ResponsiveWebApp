@@ -1,0 +1,351 @@
+<!DOCTYPE html >
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name='viewport' content = 'width = device-width, initial-scale = 1.0, user-scalable = no'/>
+
+
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/introtoapps.min.js"></script>
+
+<script type="text/javascript" src="js/account.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style_responsive.css">
+<link rel="stylesheet" type="text/css" href="style/reset.css">
+<!-- InstanceBeginEditable name="edit1" -->
+<title>check</title>
+<link rel="stylesheet" type="text/css" href="style/style_Maths_responsive.css">
+<link rel="stylesheet" type="text/css" href="style/check.css">
+
+
+
+ <script type="text/javascript">
+
+
+
+function myFunction() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("demo").innerHTML = x;
+}
+
+
+$(document).ready(function() {
+	
+	var wrong_sound = document.getElementById("wrong_answer");
+	var correct_sound = document.getElementById("correct_answer");
+	var result;
+
+    var score = 0;
+    var limit = 10;
+    var level = 1;
+	var high_score = 0;
+	
+    function basicplay(pLevel) {
+        level = pLevel;
+   
+		var count = 61;
+		var i = 0;
+        $(".show").removeClass("show");
+        //set playPage as currently displayed page
+        $("#PlayPage").addClass("show");
+;
+	 	$("#userscore").html("SCORE: " +score);
+		$("#question_title").html("Question: " +level);
+
+		// Get 2 random numbers for numberA and numberB
+	    var nA = Math.floor((Math.random() * 9) + 1);
+		    $("#numberA").html(nA);
+	
+		var nB = Math.floor((Math.random() *(9-nA-1)) + 1);
+		    $("#numberB").html(nB);	
+
+		result=nA+nB;
+			
+      }
+
+		//Start Game when Tap on Start button
+      $(".start_btn").onTap(function() {
+        basicplay(1);
+
+      });
+	  
+
+ 	 $(".num").click(function() {
+	 	$(".transparent").removeClass("transparent");
+	 	$(this).addClass("transparent");
+	  	var t=($(this).attr('id'));
+	
+	  	var tt= parseInt(t);
+	  
+ 		$("#numberC").html(tt);
+ 		if (result==tt){
+			correct_sound.play();
+			$("#numberC").removeClass("normal");
+			$("#numberC").removeClass("wrong");
+ 			$("#numberC").addClass("right");
+			$("#continue_cover").removeClass("hide");
+ 		}
+ 		else 
+ 		{
+	 		wrong_sound.play();
+	  		$("#numberC").removeClass("normal");
+ 			$("#numberC").addClass("wrong");
+ 			limit = limit -1;
+			$(".heart"+limit).addClass("hide");
+			
+			if (limit==4) {
+				$(".heart1").addClass("animateHeart");
+				$(".heart2").addClass("animateHeart");
+				$(".heart3").addClass("animateHeart");
+			}
+			if (limit == 1){
+				$("#false").removeClass("hide");
+				if (score>high_score){
+					high_score = score;
+				}
+			$("#score_now").html("Your Score: " +score);
+			$("#high_score").html("Best Score: " +high_score);
+			score = 0;
+			}
+ 		}
+
+
+	});
+
+ 	$(".continue").onTap(function() {
+        level = level+1;
+		$("#numberC").html("?");
+		$("#numberC").removeClass("right");
+		$("#numberC").addClass("normal");
+		score = score +5;
+		$("#continue_cover").addClass("hide");
+		$(".transparent").removeClass("transparent");
+		basicplay(level);
+        
+      });
+
+ 	$(".tryAgain").onTap(function() {
+		$("#false").addClass("hide");
+        level = 1;
+		limit = 10;
+		var i;
+		for (i=1; i<10; i++){
+		 	$(".heart"+i).removeClass("hide");
+		}
+		for (i=1; i<4; i++){
+		 	$(".heart"+i).removeClass("animateHeart");
+		}
+		$("#numberC").html("?");
+		$("#numberC").removeClass("false");
+		$("#numberC").addClass("normal");
+		$(".transparent").removeClass("transparent");
+		basicplay(level);
+        
+      });
+
+ });
+	
+  
+</script>
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body>
+<div id="header" class="clearfix" >
+ 		 <span class="activebutton col-1" onClick="openNav()">&#9776;</span>
+         <div class="flex-container1 col-10">
+		<div class="col-3"><img class="header_img" src="img/kids2.png"/></div>
+        <p class="sentence1 col-7">Learning While Playing<span class="sentence2">...Why Not??</span>!!</p>
+			</div>
+		<span class="col-1"><button onClick="document.getElementById('id01').style.display='block'; closeNav() " id="signin_box" >Login</button></span>
+        	<span class="col-1"><button onClick="document.getElementById('id01').style.display='block'; closeNav() " id="signin_box_img">
+        <img src="img/login.png" />
+        </button></span>       
+
+	<div id="mySidenav" class="sidenav">
+    	  <span href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</span>
+         <!-- InstanceBeginEditable name="edit3" -->
+				<ul>
+            	<li><a href="HOME.html" >HOME</a></li>
+            	<li><a href="category.html">CATEGORY</a>
+                	<ul class="submenu">
+                    	<li><a href="Mathematic.html">MATHS</a></li>
+                    	<li><a href="puzzle.html">PUZZLE</a></li>
+                        <li><a href="matching.html">MATCHING</a></li>
+						<li><a href="color.html">COLOR</a></li>
+                        <li><a href="BrainWorkout.html">BRAIN WORKOUT</a></li>
+                    	<li><a href="bubble.html">BUBBLE</a></li>
+               
+                	</ul>
+            	</li>
+       
+            	<li><a href="AboutUs.html">ABOUT US</a></li>
+       
+       			</ul>
+                <!-- InstanceEndEditable -->
+    </div>
+
+		  <div id="id01" class="modal">
+
+  <form class="modal-content animate" action="#">
+    <p class="name">LOGIN</p>
+    <div class="imgcontainer">
+      <span onClick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <img class="sun" src="img/sun.png"/>
+    </div>
+	 <div class="container">
+    <table>
+      <tr><th>Username:</th>
+      <td><input type="text" placeholder="Enter Username" name="uname" required> </td>
+		</tr>
+      <tr><th>Password:</th>
+      <td><input type="password" placeholder="Enter Password" name="psw" required></td>
+      </tr> 
+      </table>   
+      <button type="submit" class="button_account">Login</button><br/>
+     
+   	</div>
+    <p id="one"><a id="forgotpwd" class="forgotpwd" href="#">Forgot Password ?</a></p>
+	<p id="two">Don't have account? <a class="signup" href="#" id="signup">Sign up here</a></p>
+  </form>
+</div>
+
+	  
+  <div id="id02" class="modal">
+
+  <form class="modal-content animate" action="#">
+    <p class="name">CREATE NEW ACCOUNT</p>
+    <div class="imgcontainer">
+      <span onClick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <img class="sun" src="img/sun.png"/>
+    </div>
+	 <div class="container">
+    <table>
+    <tr><th>E-mail:</th>
+      <td><input type="text" placeholder="Enter E-mail" name="email" required> </td>
+		</tr>
+      <tr><th>Username:</th>
+      <td><input type="text" placeholder="Enter Username" name="uname" required> </td>
+		</tr>
+      <tr><th>Password:</th>
+      <td><input type="password" placeholder="Enter Password" name="psw" required></td>
+      </tr> 
+      </table>   
+      <button type="submit" class="button_account">Create</button><br/>
+     
+   	</div>
+ 
+	<p id="two">Already have an account? <a class="signin" href="#" id="signin">Sign in</a></p>
+  </form>
+</div>
+
+
+
+  <div id="id03" class="modal">
+
+  <form class="modal-content animate" action="#">
+    <p class="name">FORGOT PASSWORD</p>
+    <div class="imgcontainer">
+      <span onClick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <img class="sun" src="img/sun.png"/>
+    </div>
+	 <div class="container">
+     <p>Enter verification code to recover your account</p>
+    <table>
+    <tr><th>E-mail:</th>
+      <td><input type="text" placeholder="Enter E-mail" name="email" required> </td>
+		</tr>
+    
+      </table>   
+      <button type="submit" class="button_account">SEND CODE</button><br/>
+     
+   	</div>
+ 
+	
+  </form>
+</div>
+</div>
+<!-- InstanceBeginEditable name="edit2" -->
+
+<div id="content" class="clearfix">
+	<h1 class="game_title">MATHS GAME</h1>
+	<div id="box">
+
+    	<div id="MainPage" class="page show">
+    		<div id="name">MATHEMATIC GAME</div>   	
+            <img id="owl" src="img/01.png" />
+        	<img id="math_icon"  src="img/math.png"/>
+        	<button class="start_btn"> PLAY</button>
+
+
+        </div>
+      <div id="PlayPage" class="page">
+                   <div id="false" class="hide">
+                   	<div class="false_content">
+                   		<p> GAME OVER </p>
+                        <p id="score_now"></p>
+                        <p id="high_score"></p>
+                        <button type="submit" class="tryAgain">Tap to Try Again</button>
+                    </div>
+                   </div>
+      	<div id="header_game">
+			<div id="userscore"></div>
+            <div id="limit"> 
+            	
+            	<img class="heart1" src="img/heart.png"/>
+                <img class="heart2" src="img/heart.png"/>
+                <img class="heart3" src="img/heart.png"/>
+                <img class="heart4" src="img/heart.png"/>
+                <img class="heart5" src="img/heart.png"/>
+                <img class="heart6" src="img/heart.png"/>
+                <img class="heart7" src="img/heart.png"/>
+                <img class="heart8" src="img/heart.png"/>
+                <img class="heart9" src="img/heart.png"/>
+            </div>
+         </div>
+
+			<div id="question_title"></div>
+            <div id="continue_cover" class="hide">
+            <div class="continue_content"><button type="submit" class="continue">Continue</button></div>
+            </div>
+
+		<div id="maingame">
+            	<span id="numberA"></span>
+                <span>+</span>
+                <span id="numberB"></span>
+                <span >=</span>
+                <span id="numberC" >?</span>
+                
+            </div>
+		<div class="number">
+            
+            	<div id="0" class="num"><img src="img/num_0.png"/></div>
+                <div id="1" class="num"><img src="img/num_1.png"/></div>
+                <div id="2" class="num"><img src="img/num_2.png"/></div>
+                <div id="3" class="num"><img src="img/num_3.png"/></div>
+                <div id="4" class="num"><img src="img/num_4.png"/></div>
+                <div id="5" class="num"><img src="img/num_5.png"/></div>
+                <div id="6" class="num"><img src="img/num_6.png"/></div>
+                <div id="7" class="num"><img src="img/num_7.png"/></div>
+                <div id="8" class="num"><img src="img/num_8.png"/></div>
+                <div id="9" class="num"><img src="img/num_9.png"/></div>
+            </div>
+	
+            
+          
+        </div>
+</div>
+</div>
+ <audio id="wrong_answer">
+    <source src="sound/wrong_answer.mp3" type="audio/mp3">
+    </audio>
+     <audio id="correct_answer">
+    <source src="sound/correct_answer.mp3" type="audio/mp3">
+    </audio>
+<!-- InstanceEndEditable -->
+
+  <div id="footer" class="clearfix" >
+         <p>@Deakin College 2018. This web page has been developed as a student assignment for the unit SIT120: Introduction to Web App Design.</p>
+        </div>
+</body>
+<!-- InstanceEnd --></html>

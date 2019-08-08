@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+#content {
+
+		margin-bottom: 100px;
+		
+}
+
+
+.game_title {
+	color: #B85929;
+	text-align:center;
+	margin-bottom:20px;
+	margin-top:50px;
+	
+
+}
+
+#content #box {
+	height: 690px;
+	width: 975px;
+	border: 20px solid #A66F17;
+	margin: auto;
+	background-color: #056F2D;
+	background-image: url(../img/concrete-wall.png);
+	color: #FFF;
+	position: relative;
+	
+	font-size: 45px;
+	
+
+
+	
+}
+
+
+
+#content #box #name {
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+	word-spacing: 1em;
+	font-style: oblique;
+	font-weight: bolder;
+	text-align:center;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	animation-name: colorChange;
+    animation-duration: 4s;
+	animation-timing-function: linear;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes colorChange {
+
+	0%   {color:#FFF; }
+	20% {color:#CE0000;}
+	40% {color:#351935;}
+	60 {color:#49AB4F}
+    80% {  color:#FF6600;}
+}
+
+#content #box #owl {
+	left: 65px;
+	float: left;
+	position: absolute;
+	top: 180px;
+	height:auto;
+	width: 50%;
+	z-index:1;
+	
+}
+
+#content #box #math_icon {
+	height: auto;
+	width: 45%;
+	position: absolute;
+	top: 130px;
+	right: 70px;
+
+
+}
+
+#content #box #math_icon:hover {
+    animation-name: rotate_icon;
+    animation-duration: 1s;
+	animation-timing-function: linear;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+}
+
+
+@keyframes rotate_icon {
+
+	0%   {transform: rotate(-7deg); }
+    100% {  transform: rotate(+7deg);}
+}
+
+
+.show {
+     display: block !important;
+     z-index: 1 !important;
+}
+
+
+.page {
+     display: none;
+     z-index: 0;
+
+
+    }
+
+
+.start_btn {
+	padding: 30px 90px;
+	position: absolute;
+	top: 500px;
+	right: 150px;
+	font-size: 35px;
+	cursor: pointer;
+	display: inline-block;
+	background-color:#351935;
+	border:none;
+	color:#FFF;
+	font-weight:bold;
+	border-radius: 15px;
+  box-shadow: 7px 7px 7px #763876;
+  	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1050px) {
+	body{
+		font-size: 22px;
+	}
+
+}
+
+@media screen and (max-width:770px) {
+	body{
+		font-size: 18px;
+
+	}
+	#content #box{
+		width:100%;
+	}
+	
+	.start_btn{
+		font-size:25px;
+		padding: 30px 70px;
+		right:110px;
+		top:430px;
+	}
+#content #box #owl {
+
+	left:50px;
+	top: 220px;
+	height:auto;
+	width: 50%;
+
+	
+}
+#content #box #name {
+	margin-top:40px;
+	
+}
+
+@media screen and (max-width:380px) {
+	body{
+		font-size: 16px;
+
+	}
+
+	#content #box{
+		width:100%;
+		height:350px;
+		border: 10px solid #A66F17;
+	}
+	
+	.start_btn{
+		font-size:18px;
+		padding: 10px 30px;
+		right:60px;
+		top:230px;
+	}
+#content #box #owl {
+
+	left:10px;
+	top: 130px;
+	height:auto;
+	width: 50%;
+
+	
+}
+#content #box #name {
+	margin-top:30px;
+	font-size:23px;
+	
+}
+#content #box #math_icon {
+	width: 55%;
+
+	top: 70px;
+	right: 10px;
+
+
+}
+
+
+
+
+
+}
+
+@media screen and (max-height:380px) {
+	body{
+		font-size: 18px;
+
+	}
+	#content #box{
+		width:100%;
+		height:360px;
+		border: 10px solid #A66F17;
+	}
+	
+	.start_btn{
+		font-size:20px;
+		padding: 10px 30px;
+		right:130px;
+		top:250px;
+	}
+#content #box #owl {
+
+	left:50px;
+	top: 80px;
+	height:auto;
+	width: 40%;
+
+	
+}
+#content #box #name {
+	margin-top:10px;
+	font-size:30px;
+	
+}
+#content #box #math_icon {
+	width: 35%;
+
+	top: 70px;
+	right: 90px;
+
+
+}
+
+	#content {
+
+	margin-bottom:70px;
+		
+}
+}
